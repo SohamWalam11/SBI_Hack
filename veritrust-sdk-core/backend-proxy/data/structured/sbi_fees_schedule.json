@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "source": "SBI Internal Circular",
+    "effective_date": "2025-04-01"
+  },
+  "account_operations": {
+    "savings_account": {
+      "non_maintenance_charge_metro": 0,
+      "cheque_book_25_leaves": 75,
+      "cheque_book_50_leaves": 150,
+      "duplicate_statement_per_page": 20,
+      "balance_certificate": 150,
+      "stop_payment_single": 100,
+      "stop_payment_range": 200
+    },
+    "current_account": {
+      "minimum_balance_regular": 5000,
+      "non_maintenance_charge": 500,
+      "cheque_return_insufficient_funds": 500,
+      "dd_issuance_upto_5000": 25,
+      "dd_issuance_5001_to_10000": 50,
+      "dd_issuance_above_10000_per_1000": 5
+    }
+  },
+  "digital_transactions": {
+    "imps": {
+      "upto_1_lakh": 5,
+      "1_to_2_lakh": 15,
+      "2_to_5_lakh": 25
+    },
+    "neft": {
+      "online": 0,
+      "branch_upto_10000": 2,
+      "branch_10001_to_1_lakh": 5,
+      "branch_1_to_2_lakh": 15,
+      "branch_above_2_lakh": 25
+    },
+    "rtgs": {
+      "online": 0,
+      "branch_2_to_5_lakh": 25,
+      "branch_above_5_lakh": 50
+    },
+    "upi": {
+      "person_to_person": 0,
+      "person_to_merchant": 0
+    }
+  },
+  "locker_charges": {
+    "small": { "metro": 2000, "urban": 1500, "semi_urban": 1000, "rural": 500 },
+    "medium": { "metro": 4000, "urban": 3000, "semi_urban": 2000, "rural": 1000 },
+    "large": { "metro": 8000, "urban": 6000, "semi_urban": 4000, "rural": 2000 }
+  },
+  "card_charges": {
+    "debit_card_classic_annual": 125,
+    "debit_card_global_annual": 200,
+    "debit_card_platinum_annual": 425,
+    "atm_other_bank_beyond_free_txn": 21,
+    "free_txn_metro_other_bank": 3,
+    "free_txn_non_metro_other_bank": 5
+  }
+}

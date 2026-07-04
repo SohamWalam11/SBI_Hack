@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "regulatory_reference": "RBI Digital Lending Directions, 2025",
+    "description": "Key Fact Statement template fields per RBI mandate"
+  },
+  "template_fields": {
+    "lender_details": {
+      "lender_name": "State Bank of India",
+      "lender_registration": "RBI Regulated Commercial Bank",
+      "lender_address": "State Bank Bhawan, Madame Cama Road, Mumbai - 400021"
+    },
+    "loan_details": {
+      "loan_amount": null,
+      "loan_type": null,
+      "tenure_months": null,
+      "repayment_frequency": "Monthly",
+      "number_of_installments": null
+    },
+    "cost_details": {
+      "nominal_interest_rate_pa": null,
+      "interest_type": "Fixed/Floating",
+      "annual_percentage_rate": null,
+      "processing_fee": null,
+      "processing_fee_percent": null,
+      "stamp_duty": null,
+      "insurance_premium": null,
+      "documentation_charges": null,
+      "other_upfront_charges": null,
+      "total_upfront_deductions": null
+    },
+    "repayment_details": {
+      "emi_amount": null,
+      "total_interest_payable": null,
+      "total_amount_payable": null,
+      "net_disbursed_amount": null,
+      "first_emi_date": null,
+      "last_emi_date": null
+    },
+    "compliance_fields": {
+      "cooling_off_period_days": 3,
+      "cooling_off_terms": "Borrower may exit the loan within the cooling-off period by repaying principal and proportionate interest, without penalty.",
+      "penal_charges": "Penal charges shall be levied as per RBI Circular on Penal Charges dated August 18, 2023. These are excluded from APR calculation.",
+      "prepayment_terms": "No prepayment penalty on floating rate loans for individual borrowers.",
+      "grievance_redressal": "Contact SBI Customer Care: 1800-11-2211 (Toll Free) or visit nearest branch.",
+      "ombudsman_info": "RBI Integrated Ombudsman: https://cms.rbi.org.in"
+    },
+    "borrower_acknowledgment": {
+      "text": "I/We acknowledge that I/We have read and understood the Key Fact Statement and the terms of the loan. I/We confirm that the information provided herein has been explained to me/us in a language I/we understand.",
+      "requires_signature": true,
+      "validity_working_days": 3
+    }
+  },
+  "apr_calculation_rules": {
+    "method": "Internal Rate of Return (IRR)",
+    "included_in_apr": [
+      "Interest charges",
+      "Processing fee",
+      "Documentation charges",
+      "Verification charges",
+      "Insurance premium (if linked to loan)"
+    ],
+    "excluded_from_apr": [
+      "Penal charges",
+      "Late payment fees",
+      "Prepayment/foreclosure charges",
+      "Stamp duty",
+      "Contingent charges"
+    ]
+  }
+}

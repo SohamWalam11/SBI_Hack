@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "version": "7.0",
+    "source": "State Bank of India",
+    "effective_date": "2025-06-15",
+    "last_updated": "2026-06-01",
+    "disclaimer": "Rates subject to change. Verify with official SBI channels."
+  },
+  "savings_account": {
+    "standard": {
+      "rate_percent_pa": 2.50,
+      "effective_date": "2025-06-15",
+      "compounding": "quarterly",
+      "min_balance_metro": 3000,
+      "min_balance_urban": 3000,
+      "min_balance_semi_urban": 2000,
+      "min_balance_rural": 1000
+    },
+    "jan_dhan": {
+      "rate_percent_pa": 2.50,
+      "effective_date": "2025-06-15",
+      "min_balance": 0,
+      "overdraft_limit": 10000
+    },
+    "basic_savings": {
+      "rate_percent_pa": 2.50,
+      "effective_date": "2025-06-15",
+      "min_balance": 0
+    }
+  },
+  "term_deposit": {
+    "general": [
+      { "min_days": 7, "max_days": 45, "rate_percent_pa": 3.05 },
+      { "min_days": 46, "max_days": 179, "rate_percent_pa": 5.00 },
+      { "min_days": 180, "max_days": 210, "rate_percent_pa": 5.75 },
+      { "min_days": 211, "max_days": 364, "rate_percent_pa": 6.00 },
+      { "min_days": 365, "max_days": 729, "rate_percent_pa": 6.25 },
+      { "min_days": 730, "max_days": 1094, "rate_percent_pa": 6.35 },
+      { "min_days": 1095, "max_days": 1824, "rate_percent_pa": 6.40 },
+      { "min_days": 1825, "max_days": 3650, "rate_percent_pa": 6.45 }
+    ],
+    "senior_citizen": [
+      { "min_days": 7, "max_days": 45, "rate_percent_pa": 3.55 },
+      { "min_days": 46, "max_days": 179, "rate_percent_pa": 5.50 },
+      { "min_days": 180, "max_days": 210, "rate_percent_pa": 6.25 },
+      { "min_days": 211, "max_days": 364, "rate_percent_pa": 6.50 },
+      { "min_days": 365, "max_days": 729, "rate_percent_pa": 6.75 },
+      { "min_days": 730, "max_days": 1094, "rate_percent_pa": 6.85 },
+      { "min_days": 1095, "max_days": 1824, "rate_percent_pa": 6.90 },
+      { "min_days": 1825, "max_days": 3650, "rate_percent_pa": 7.05 }
+    ],
+    "special_schemes": {
+      "amrit_vrishti": {
+        "tenure_days": 444,
+        "rate_general": 7.25,
+        "rate_senior": 7.75,
+        "effective_date": "2025-04-01"
+      }
+    }
+  },
+  "recurring_deposit": {
+    "general": [
+      { "min_months": 12, "max_months": 24, "rate_percent_pa": 6.25 },
+      { "min_months": 25, "max_months": 36, "rate_percent_pa": 6.25 },
+      { "min_months": 37, "max_months": 60, "rate_percent_pa": 6.35 },
+      { "min_months": 61, "max_months": 120, "rate_percent_pa": 6.40 }
+    ]
+  }
+}
