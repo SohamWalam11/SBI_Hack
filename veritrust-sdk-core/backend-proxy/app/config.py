@@ -63,7 +63,7 @@ class Settings(BaseSettings):
         description="Directory containing structured JSON data files",
     )
     COMPLIANCE_SOURCE_DIR: str = Field(
-        default="../../data",
+        default="./data",
         description="Directory containing source compliance PDFs",
     )
     AUDIT_LOG_DIR: str = Field(

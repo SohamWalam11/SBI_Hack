@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: veritrust-backend
+    env: docker
+    rootDir: veritrust-sdk-core/backend-proxy
+    region: oregon # you can change this to your preferred region (e.g., frankfurt, ohio)
+    plan: free # free tier
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: GEMINI_API_KEY
+        sync: false # Requires you to set this manually in the Render dashboard

@@ -13,6 +13,7 @@ RUN groupadd -r veritrust && useradd -r -g veritrust veritrust
 # System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
