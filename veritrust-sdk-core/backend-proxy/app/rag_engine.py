@@ -73,7 +73,7 @@ class RAGEngine:
 
     def _ensure_initialized(self):
         """Lazy initialization of ChromaDB client and embedding function."""
-        if self._client is not None:
+        if self._client is not None and self._collection is not None:
             return
 
         self._client = chromadb.PersistentClient(
