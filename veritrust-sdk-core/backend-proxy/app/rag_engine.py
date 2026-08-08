@@ -61,6 +61,23 @@ FORMAT:
 """
 
 
+from chromadb import Documents, EmbeddingFunction, Embeddings
+
+class GeminiEmbeddingFunction(EmbeddingFunction):
+    def __init__(self, api_key: str):
+        import google.generativeai as genai
+        genai.configure(api_key=api_key)
+        self.model_name = "models/text-embedding-004"
+
+    def __call__(self, input: Documents) -> Embeddings:
+        import google.generativeai as genai
+        result = genai.embed_content(
+            model=self.model_name,
+            content=input,
+            task_type="retrieval_document"
+        )
+        return result['embedding']
+
 class RAGEngine:
     """Semantic retrieval and grounded generation engine."""
 
@@ -80,7 +97,7 @@ class RAGEngine:
             path=self._settings.CHROMA_PERSIST_DIR
         )
 
-        self._embedding_fn = embedding_functions.GoogleGenerativeAiEmbeddingFunction(
+        self._embedding_fn = GeminiEmbeddingFunction(
             api_key=self._settings.GEMINI_API_KEY
         )
 
