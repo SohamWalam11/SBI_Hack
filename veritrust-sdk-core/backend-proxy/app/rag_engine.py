@@ -80,8 +80,8 @@ class RAGEngine:
             path=self._settings.CHROMA_PERSIST_DIR
         )
 
-        self._embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name=self._settings.EMBEDDING_MODEL
+        self._embedding_fn = embedding_functions.GoogleGenerativeAiEmbeddingFunction(
+            api_key=self._settings.GEMINI_API_KEY
         )
 
         self._collection = self._client.get_or_create_collection(
