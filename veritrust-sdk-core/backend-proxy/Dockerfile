@@ -7,8 +7,7 @@
 
 FROM python:3.12-slim AS base
 
-# Security: run as non-root
-RUN groupadd -r veritrust && useradd -r -g veritrust veritrust
+RUN groupadd -r veritrust && useradd -r -m -g veritrust veritrust
 
 # System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
