@@ -67,7 +67,7 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
     def __init__(self, api_key: str):
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        self.model_name = "models/text-embedding-004"
+        self.model_name = "models/gemini-embedding-2"
 
     def __call__(self, input: Documents) -> Embeddings:
         import google.generativeai as genai
